@@ -12,7 +12,6 @@ import {
 } from "./components";
 
 const App = () => {
-
   return (
     <BrowserRouter>
       <Box
@@ -30,6 +29,11 @@ const App = () => {
           <Route path="/channel/:id" element={<ChannelDetail />} />
 
           <Route path="/search/:searchTerm" element={<SearchFeed />} />
+
+          <Route
+            path="/search/:searchTerm/video/:id"
+            element={<VideoDetail />}
+          />
         </Routes>
       </Box>
     </BrowserRouter>
